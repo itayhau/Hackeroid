@@ -11,3 +11,9 @@ onUpgrade()
 SQLiteOpenHelper should call the super constructor.
 The onUpgrade() method will only be called when the version integer is larger than the current version running in the app.
 If you want the onUpgrade() method to be called, you need to increment the version number in your code.
+
+When you open a data base by using db  openHelperImplObj.getWritableDatabase(); then following thing check
+
+1>If database is not created then it create database and open it for write mode else created first then open.
+
+2>Second and most important what i have observed if data base is already created then it opened it but if its open already it do nothing, That means it occupy the old instance of data base that open DB already until you close it.Thats why its better practice to close DB once it use over
