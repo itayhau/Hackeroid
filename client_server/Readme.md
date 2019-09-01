@@ -1,0 +1,1 @@
+Welcome to Android vs Spring application
